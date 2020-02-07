@@ -1,0 +1,52 @@
+:global {
+  * {
+    user-select: none;
+  }
+
+  body {
+    font-family: sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  width: 70vw;
+  height: 30vh;
+  margin: auto;
+
+}
+.form {
+  padding: 10px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 30px;
+}
+.form > div:nth-child(odd) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flex-row {
+  padding: 3px;
+}
+.button {
+  all: unset;
+  background: #555;
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: default;
+  user-select: none;
+  margin-left: 0.3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.dark {
+  background: #333;
+  color: #DDD;
+}

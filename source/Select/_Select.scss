@@ -1,0 +1,118 @@
+.select {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  border-radius: 3px;
+  outline: none;
+}
+.select[data-focused="true"] {
+  z-index: 9999;
+}
+.header {
+  background: #555;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+}
+.header .title {
+  background: inherit;
+  align-self: stretch;
+  padding: 3px 3px 3px 4px;
+  border-radius: 3px 0 0 3px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-grow: 1;
+}
+.select[data-opened="true"] .title {
+  border-radius: 3px 0 0 0;
+}
+.arrow {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: #5a5a5a;
+  border-left: 1px solid #444;
+  max-width: 0.6rem;
+  padding: 0.3rem 0.4rem;
+  display: inline-block;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  border-radius: 0 3px 3px 0;
+  margin-left: auto;
+}
+.select[data-opened="true"] .arrow {
+  border-radius: 0 3px 0 0;
+}
+.header path {
+  fill: currentColor;
+}
+.menu-wrapper {
+  position: absolute;
+  height: 0px;
+  transition: height 0.2s;
+  overflow: hidden;
+}
+.menu-wrapper > div {
+  /* height: 100%; */
+  overflow: overlay;
+  width: 100%;
+}
+.menu {
+  background: #555;
+  border-radius: 0 0 3px 3px;
+}
+.option {
+  background: inherit;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+.option:hover {
+  filter: brightness(150%);
+}
+.icon {
+  width: 1rem;
+  max-width: 1rem;
+  display: inline-block;
+  padding-right: 1px;
+}
+.icon path {
+  fill: currentColor;
+}
+
+.select[data-direction="top"] .menu-wrapper  {
+  bottom: 100%;
+}
+/*
+.select[data-direction="top"] .menu {
+  position: relative;
+  transform: rotate(180deg);
+  transform-origin: center;
+  left: -6px;
+}
+*/
+
+//
+// Scrollbar
+//
+.menu-wrapper > div::-webkit-scrollbar {
+  width: 7px;
+}
+.opened .menu-wrapper > div::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.menu-wrapper > div::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+.menu-wrapper > div::-webkit-scrollbar-thumb {
+  background: lighten(#444, 10);
+  border-radius: 2px;
+}
+.menu-wrapper > div::-webkit-scrollbar-track {
+  background: darken(#444, 10);
+}
+.menu-wrapper > div::-webkit-scrollbar-corner {
+  width: 0;
+  height: 0;
+}
