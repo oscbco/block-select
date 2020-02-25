@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { isKeyUp, isKeyDown, isKeyEnter, isKeyEsc } from './isKey';
 import { getPrevItem, getNextItem } from './cycleArray';
@@ -9,10 +9,18 @@ import css from './_Select.scss';
 export default function Select (props) {
   const [opened, setOpened] = useState(false);
   const [bounds, setBounds] = useState(null);
-  const [selected, setSelected] = useState(props.defaultItem && props.defaultItem.value);
+  const [selected, setSelected] = useState((props.selectedItem && props.selectedItem.value) || props.defaultItem.value);
   const [active, setActive] = useState(-1);
   const [direction, setDirection] = useState(false);
   const [focused, setFocused] = useState(false);
+
+  console.log(selected);
+
+  useEffect(() => {
+    if (props.selectedItem) {
+      setSelected(props.selectedItem.value)
+    }
+  }, [props.selectedItem]);
 
   const menuCb = useCallback((ref) => {
     if (ref) {
@@ -131,5 +139,6 @@ Select.propTypes = {
   items: PropTypes.array,
   onChange: PropTypes.func,
   classes: PropTypes.object,
-  defaultItem: PropTypes.object
+  defaultItem: PropTypes.object,
+  selectedItem: PropTypes.object
 };
