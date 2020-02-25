@@ -65,13 +65,14 @@
   padding: 3px;
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
 .option:hover {
   filter: brightness(150%);
 }
 .icon {
-  width: 1rem;
-  max-width: 1rem;
+  width: 0.7rem;
+  max-width: 0.7rem;
   display: inline-block;
   padding-right: 1px;
 }

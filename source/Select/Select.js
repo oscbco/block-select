@@ -89,27 +89,27 @@ export default function Select (props) {
     const check = item.value === selected ? <div className={css.icon}><svg width="100%" viewBox="0 0 24 21"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg></div> : '';
 
     return (
-      <div className={css.option + ' ' + (props.classes.option || ' oscbco-select-option')} data-is-active={index === active} key={item.value} data-value={item.value}>
+      <div className={css.option + ' ' + (props.classes.option || ' oscbco-block-select-option')} data-is-active={index === active} key={item.value} data-value={item.value}>
         {label} {check}
       </div>
     );
   });
 
   return (
-    <div ref={menuCb} tabIndex={-1} data-opened={opened} data-focused={focused} data-direction={direction ? 'top' : 'down'} className={css.select + ' ' + (props.classes.select || ' oscbco-select')} onClick={toggle} onKeyDown={handleKeyDown} onBlur={close} style={{ minWidth: (bounds ? bounds.width + 'px' : '70px') }}>
-      <div data-section='header' className={css.header + ' ' + (props.classes.header || ' oscbco-select-header')}>
-        <span data-section='header' className={css.title + ' ' + (props.classes.title || ' oscbco-select-title')}>
+    <div ref={menuCb} tabIndex={-1} data-opened={opened} data-focused={focused} data-direction={direction ? 'top' : 'down'} className={css.select + ' ' + (props.classes.select || ' oscbco-block-select')} onClick={toggle} onKeyDown={handleKeyDown} onBlur={close} style={{ minWidth: (bounds ? bounds.width + 'px' : '70px') }}>
+      <div data-section='header' className={css.header + ' ' + (props.classes.header || ' oscbco-block-select-header')}>
+        <span data-section='header' className={css.title + ' ' + (props.classes.title || ' oscbco-block-select-title')}>
           {getSelectedLabel()}
         </span>
-        <span data-section='arrow' className={css.arrow + ' ' + (props.classes.arrow || ' oscbco-select-arrow')}>
+        <span data-section='arrow' className={css.arrow + ' ' + (props.classes.arrow || ' oscbco-block-select-arrow')}>
           <svg data-section='arrow' width="100%" viewBox="0 0 24 24">
             <path data-section='arrow' d="M12 21l-12-18h24z"/>
           </svg>
         </span>
       </div>
-      <div data-section='menu-wrapper' className={css.menuWrapper + ' ' + (props.classes.menuWrapper || ' oscbco-select-menu-wrapper')} style={{ height: (opened ? bounds.height + 'px' : '0px') }}>
+      <div data-section='menu-wrapper' className={css.menuWrapper + ' ' + (props.classes.menuWrapper || ' oscbco-block-select-menu-wrapper')} style={{ height: (opened ? bounds.height + 'px' : '0px') }}>
         <div style={{ height: (bounds ? bounds.height + 'px' : '100%') }}>
-          <div data-section='menu' className={css.menu + ' ' + (props.classes.menu || ' oscbco-select-menu')} style={{ minWidth: (bounds ? bounds.width + 'px' : '70px') }}>
+          <div data-section='menu' className={css.menu + ' ' + (props.classes.menu || ' oscbco-block-select-menu')} style={{ minWidth: (bounds ? bounds.width + 'px' : '70px') }}>
             {items}
           </div>
         </div>
