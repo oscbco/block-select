@@ -10,11 +10,9 @@ export default function Select (props) {
   const [opened, setOpened] = useState(false);
   const [bounds, setBounds] = useState(null);
   const [selected, setSelected] = useState((props.selectedItem && props.selectedItem.value) || props.defaultItem.value);
-  const [active, setActive] = useState(-1);
+  const [active, setActive] = useState(0);
   const [direction, setDirection] = useState(false);
   const [focused, setFocused] = useState(false);
-
-  console.log(selected);
 
   useEffect(() => {
     if (props.selectedItem) {
