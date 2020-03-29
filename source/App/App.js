@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 
 import Select from '../Select/Select';
 import css from './_App.scss';
-import './blue.css';
-import './dark.css';
-import './green.css';
-import './orange.css';
+import './themes/blue.css';
+import './themes/dark.css';
+import './themes/orange.css';
+import './themes/green.css';
 
 import * as data from './data';
 
 export default function App () {
   const [ide, setIde] = useState('netbeans');
-  const onChange = (value) => {
-    console.log('Item selected: ' + value);
+  const onChangeIde = (value) => {
     setIde(value);
   };
-  console.log(ide);
+  const onChange = (value) => {
+
+  };
+
   return (
     <>
       <div className={css.wrapper}>
@@ -25,16 +27,18 @@ export default function App () {
             Select IDE:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChange}
+            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
               selectedItem={{
                 value: ide
               }} defaultItem={{
                 value: 'aptana',
                 label: 'Aptana'
               }} classes={{
+                select: 'dark-select',
                 title: 'dark-title',
-                itemContainer: 'dark-item-container',
-                item: 'dark-item'
+                arrow: 'dark-arrow',
+                menuWrapper: 'dark-menu-wrapper',
+                option: 'dark-option'
               }} />
             <div className={css.button} onClick={() => {
               setIde('aptana');
@@ -49,9 +53,11 @@ export default function App () {
           <div className={css.flexRow}>
             <Select placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
               classes={{
+                select: 'dark-select',
                 title: 'dark-title',
-                itemContainer: 'dark-item-container',
-                item: 'dark-item'
+                arrow: 'dark-arrow',
+                menuWrapper: 'dark-menu-wrapper',
+                option: 'dark-option'
               }} />
             <div className={css.button}>
               Apply
@@ -67,9 +73,11 @@ export default function App () {
                 value: '14',
                 label: '14px'
               }} classes={{
+                select: 'dark-select',
                 title: 'dark-title',
-                itemContainer: 'dark-item-container',
-                item: 'dark-item'
+                arrow: 'dark-arrow',
+                menuWrapper: 'dark-menu-wrapper',
+                option: 'dark-option'
               }} />
             <div className={css.button}>
               Apply
@@ -84,14 +92,18 @@ export default function App () {
             Select IDE:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChange}
-              defaultItem={{
+            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
+              selectedItem={{
+                value: ide
+              }} defaultItem={{
                 value: 'aptana',
                 label: 'Aptana'
               }} classes={{
-                title: 'green-title',
-                itemContainer: 'green-item-container',
-                item: 'green-item'
+                select: 'blue-select',
+                title: 'blue-title',
+                arrow: 'blue-arrow',
+                menuWrapper: 'blue-menu-wrapper',
+                option: 'blue-option'
               }} />
             <div className={css.button}>
               Apply
@@ -104,9 +116,11 @@ export default function App () {
           <div className={css.flexRow}>
             <Select placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
               classes={{
+                select: 'green-select',
                 title: 'green-title',
-                itemContainer: 'green-item-container',
-                item: 'green-item'
+                arrow: 'green-arrow',
+                menuWrapper: 'green-menu-wrapper',
+                option: 'green-option'
               }} />
             <div className={css.button}>
               Apply
@@ -123,12 +137,10 @@ export default function App () {
                 label: '14px'
               }} classes={{
                 select: 'green-select',
-                header: 'green-select-header',
-                title: 'green-select-title',
-                arrow: 'green-select-arrow',
-                menu: 'green-select-menu',
-                option: 'green-select-option',
-                menuWrapper: 'green-select-menu-wrapper'
+                title: 'green-title',
+                arrow: 'green-arrow',
+                menuWrapper: 'green-menu-wrapper',
+                option: 'green-option'
               }} />
             <div className={css.button}>
               Apply
@@ -144,12 +156,10 @@ export default function App () {
                 label: '14px'
               }} classes={{
                 select: 'orange-select',
-                header: 'orange-select-header',
-                title: 'orange-select-title',
-                arrow: 'orange-select-arrow',
-                menu: 'orange-select-menu',
-                option: 'orange-select-option',
-                menuWrapper: 'orange-select-menu-wrapper'
+                title: 'orange-title',
+                arrow: 'orange-arrow',
+                menuWrapper: 'orange-menu-wrapper',
+                option: 'orange-option'
               }} />
             <div className={css.button}>
               Apply

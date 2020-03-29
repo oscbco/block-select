@@ -1,0 +1,61 @@
+ .dark-select {
+  --select-bg: #555;
+  --select-fg: #DDD;
+  --title-bg: #333;
+  --title-fg-hover: #FFF;
+  --title-top-border-bg:rgba(255,255,255,0.1);
+  --arrow-bg: #5a5a5a;
+  --arrow-left-border-bg: #444;
+  --menu-wrapper-bg: #3F3F3F;
+  --menu-wrapper-shadow: #000;
+  --option-bg: #3F3F3F;
+  --option-bg-active: #555;
+  --option-fg-active: #DDD;
+  --option-bg-hover: #555;
+  --option-fg-hover: #FFF;
+  --scroll-bg: #555;
+
+   background: var(--select-bg);
+   color: var(--select-fg);
+ }
+ .dark-title {
+   border-top-color: var(--title-top-border-bg);
+ }
+.dark-title[data-is-open="true"] {
+  transition-delay: 0s;
+  background-color: var(--title-bg);
+}
+.dark-select:hover {
+  color: var(--title-fg-hover);
+}
+.dark-select:hover path {
+  fill: var(--title-fg-hover);
+}
+.dark-arrow {
+  background: var(--arrow-bg);
+  border-top-color: var(--title-top-border-bg);
+  border-left-color: var(--arrow-left-border-bg);
+}
+.dark-menu-wrapper {
+  box-shadow: 0px 1px 3px -1px var(--menu-wrapper-shadow);
+  background-color: var(--menu-wrapper-bg);
+  border-radius: 0 0 2px 2px;
+}
+.dark-option {
+  background-color: var(--option-bg);
+  white-space: nowrap;
+}
+.dark-option[data-is-active="true"] {
+  background: var(--option-bg-active);
+  color: var(--option-fg-active);
+}
+.dark-option:hover {
+  background-color: var(--option-bg-active);
+  color:  var(--option-fg-hover);
+}
+.orange-menu-wrapper > div::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+}
+.orange-menu-wrapper > div::-webkit-scrollbar-track {
+  background: var(--scroll-bg);
+}

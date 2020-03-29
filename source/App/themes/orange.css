@@ -1,0 +1,61 @@
+ .orange-select {
+  --select-bg: #DB7C26;
+  --select-fg: #DDD;
+  --title-bg: #333;
+  --title-fg-hover: #FFF;
+  --title-top-border-bg:rgba(255,255,255,0.1);
+  --arrow-bg: #E1934D;
+  --arrow-left-border-bg: #A02720;
+  --menu-wrapper-bg: #ED7D3A;
+  --menu-wrapper-shadow: #000;
+  --option-bg: #ED7D3A;
+  --option-bg-active: #C26730;
+  --option-fg-active: #DDD;
+  --option-bg-hover: #975025;
+  --option-fg-hover: #FFF;
+  --scroll-bg: #DB7C26;
+
+   background: var(--select-bg);
+   color: var(--select-fg);
+ }
+ .orange-title {
+   border-top-color: var(--title-top-border-bg);
+ }
+.orange-title[data-is-open="true"] {
+  transition-delay: 0s;
+  background-color: var(--title-bg);
+}
+.orange-select:hover {
+  color: var(--title-fg-hover);
+}
+.orange-select:hover path {
+  fill: var(--title-fg-hover);
+}
+.orange-arrow {
+  background: var(--arrow-bg);
+  border-top-color: var(--title-top-border-bg);
+  border-left-color: var(--arrow-left-border-bg);
+}
+.orange-menu-wrapper {
+  box-shadow: 0px 1px 3px -1px var(--menu-wrapper-shadow);
+  background-color: var(--menu-wrapper-bg);
+  border-radius: 0 0 2px 2px;
+}
+.orange-option {
+  background-color: var(--option-bg);
+  white-space: nowrap;
+}
+.orange-option[data-is-active="true"] {
+  background: var(--option-bg-active);
+  color: var(--option-fg-active);
+}
+.orange-option:hover {
+  background-color: var(--option-bg-active);
+  color:  var(--option-fg-hover);
+}
+.orange-menu-wrapper > div::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+}
+.orange-menu-wrapper > div::-webkit-scrollbar-track {
+  background: var(--scroll-bg);
+}
