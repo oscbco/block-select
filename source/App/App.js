@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Select from '../Select/Select';
+import BlockSelect from '../Select/Select';
 import css from './_App.scss';
 import './themes/blue.css';
 import './themes/dark.css';
@@ -27,7 +27,7 @@ export default function App () {
             Select IDE:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
+            <BlockSelect placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
               selectedItem={{
                 value: ide
               }} defaultItem={{
@@ -51,7 +51,7 @@ export default function App () {
               Select Language:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
+            <BlockSelect placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
               classes={{
                 select: 'dark-select',
                 title: 'dark-title',
@@ -68,7 +68,7 @@ export default function App () {
             Select Font Size:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder=' ' items={data.fontSizes} onChange={onChange}
+            <BlockSelect placeholder=' ' items={data.fontSizes} onChange={onChange}
               defaultItem={{
                 value: '14',
                 label: '14px'
@@ -92,7 +92,7 @@ export default function App () {
             Select IDE:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
+            <BlockSelect placeholder='Select an IDE from this list' items={data.ides} onChange={onChangeIde}
               selectedItem={{
                 value: ide
               }} defaultItem={{
@@ -114,7 +114,7 @@ export default function App () {
             Select Language:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
+            <BlockSelect placeholder='Select a language' items={data.programmingLanguages} onChange={onChange}
               classes={{
                 select: 'green-select',
                 title: 'green-title',
@@ -131,7 +131,7 @@ export default function App () {
             Select Font Size:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder=' ' items={data.fontSizes} onChange={onChange}
+            <BlockSelect placeholder=' ' items={data.fontSizes} onChange={onChange}
               defaultItem={{
                 value: '14',
                 label: '14px'
@@ -150,7 +150,7 @@ export default function App () {
             Select Font Size:
           </div>
           <div className={css.flexRow}>
-            <Select placeholder=' ' items={data.fontSizes} onChange={onChange}
+            <BlockSelect placeholder=' ' items={data.fontSizes} onChange={onChange}
               defaultItem={{
                 value: '14',
                 label: '14px'
