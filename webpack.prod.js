@@ -1,4 +1,4 @@
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
@@ -6,7 +6,6 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    // 'react-hot-loader/patch',
     path.join(__dirname, 'source', 'Select', 'Select.js')
   ],
   output: {
@@ -97,8 +96,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    }),
-    new BundleAnalyzerPlugin()
+    })// ,
+    // new BundleAnalyzerPlugin()
   ],
   externals: {
     react: {
