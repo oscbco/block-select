@@ -76,3 +76,8 @@ To run the examples:
 - Can receive focus but can't be reached with tab,
 - Completely customizable with the classes prop.
 - It can be inlined with sibling elements and even used multiple times inside a paragraph
+
+## Tests
+  ```console
+    npm test
+  ```
