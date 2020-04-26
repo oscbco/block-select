@@ -126,7 +126,7 @@ export default function Select (props) {
 
 Select.defaultProps = {
   classes: {},
-  placeholder: ' ',
+  placeholder: 'Select option',
   defaultItem: {},
   items: [],
   onChange: () => {}
