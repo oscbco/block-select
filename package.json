@@ -1,6 +1,6 @@
 {
   "name": "@oscbco/block-select",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Block Select",
   "main": "index.js",
   "scripts": {
